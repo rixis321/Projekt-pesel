@@ -141,9 +141,13 @@
   <ItemGroup>
     <ClCompile Include="Class.cpp" />
     <ClCompile Include="ConsoleApplication.cpp" />
+    <ClCompile Include="wczytaj.cpp" />
+    <ClCompile Include="wypisz.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Class.h" />
+    <ClInclude Include="wczytaj.h" />
+    <ClInclude Include="wypisz.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
