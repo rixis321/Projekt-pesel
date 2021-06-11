@@ -2,10 +2,11 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include "Class.h"
+#include "Spr_pesel.h"
 #include "wczytaj.h"
 #include <list>
 #include "wypisz.h"
+#include "Konwersja.h"
 using namespace std;
 int main()
 {
@@ -44,6 +45,9 @@ int main()
 			else if (pesel.sprawdz(dane) == false)
 			{
 				cout << "Wprowadzony numer PESEL jest prawidlowy." << endl;
+				Konwersja liczba(dane);
+				liczba.zamiana(dane);
+
 			}
 				
 			
@@ -88,6 +92,7 @@ int main()
 			}
 			cout <<"Lista numerow po usunieciu nieprawidlowych danych: "<< endl;
 			wypisz(lista2);
+			cout << endl;
 			
 
 

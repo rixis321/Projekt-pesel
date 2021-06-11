@@ -139,13 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Class.cpp" />
+    <ClCompile Include="Spr_pesel.cpp" />
     <ClCompile Include="ConsoleApplication.cpp" />
+    <ClCompile Include="Konwersja.cpp" />
+    <ClCompile Include="Suma_kontrolna.cpp" />
     <ClCompile Include="wczytaj.cpp" />
     <ClCompile Include="wypisz.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Class.h" />
+    <ClInclude Include="Spr_pesel.h" />
+    <ClInclude Include="Konwersja.h" />
+    <ClInclude Include="Suma_kontrolna.h" />
     <ClInclude Include="wczytaj.h" />
     <ClInclude Include="wypisz.h" />
   </ItemGroup>

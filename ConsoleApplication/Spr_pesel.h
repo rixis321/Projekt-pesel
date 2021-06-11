@@ -6,10 +6,11 @@ using namespace std;
 
 class Spr_pesel
 {
-	string pesel;
+	
 	bool flaga;
 
 public:
+	string pesel;
 	bool sprawdz(string s1)
 	{
 		pesel = s1;
