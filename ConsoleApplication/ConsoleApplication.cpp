@@ -33,6 +33,20 @@ int main()
 			cout << "*******Sprawdzanie poprawnosc numeru pesel******* " << endl;
 			Spr_pesel pesel(dane);
 			pesel.sprawdz(dane);
+			if (pesel.sprawdz(dane) == true)
+			{
+				while (pesel.sprawdz(dane) == true)
+				{
+					cout << "Wprowadzono nieprawidlowy numer pesel. Sprobuj ponownie :" << endl;
+					cin >> dane;
+				}
+			}
+			else if (pesel.sprawdz(dane) == false)
+			{
+				cout << "Wprowadzony numer PESEL jest prawidlowy." << endl;
+			}
+				
+			
 			cout << "1.Odczytaj date urodzenia" << endl;
 			cout << "2.Odczytaj plec" << endl;
 			cout << "3.Odczytaj dzien,miesiac,rok" << endl;
@@ -61,12 +75,19 @@ int main()
 			cout << endl;
 			cout << endl;
 			cout << "*******Sprawdzanie poprawnosci wprowadzonych danych******* " << endl;
-			
+			cout << endl;
+			list<string> lista2;
 			for (string x : lista)
 			{
 				Spr_pesel pesel(x);
 				pesel.sprawdz(x);
+				if (pesel.sprawdz(x) == false)
+				{
+					lista2.push_back(x);
+				}
 			}
+			cout <<"Lista numerow po usunieciu nieprawidlowych danych: "<< endl;
+			wypisz(lista2);
 			
 
 

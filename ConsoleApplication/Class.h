@@ -7,47 +7,39 @@ using namespace std;
 class Spr_pesel
 {
 	string pesel;
+	bool flaga;
 
 public:
-	void sprawdz(string s1)
+	bool sprawdz(string s1)
 	{
 		pesel = s1;
+		
 		
 		
 		if (pesel.length() != 11)
 		{
 			while (pesel.length() != 11)
 			{
-				cout << "Wprowadzono nieprawidlowy numer pesel. Sprobuj ponownie :" << endl;
-				cin >> pesel;
+				flaga = true;
+				break;
 			}
-			
+
 		}
 		else
+			flaga = false;
 		{
-			bool flaga = false;
+	
 			for (int i = 0; i < pesel.length(); i++)
 			{
 				char c = pesel[i];
-				if (c< 47 or c > 58)
+				if (c < 47 or c > 58)
 				{
 					flaga = true;
-
-				}			
+				}
 			}
-			if (flaga == false)
-			{
-				cout << "Pesel jest prawidlowy" << endl;
-			}
-			else if (flaga == true)
-			{
-				cout << "Nieprawidlowy pesel" << endl;
-			}
-				
-			
-			
 
 		}
+		return flaga;
 
 	}
 	Spr_pesel(string s2)
