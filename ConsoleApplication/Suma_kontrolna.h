@@ -7,18 +7,37 @@ using namespace std;
 class Suma_kontrolna
 	: public Konwersja
 {
-	long long liczba;
-	int tab[11];
+	string pesel;
+	int suma;
 	
 public:
-	int  *dodaj_do_tab(long long number)
+	int sprawdz_sume()
 	{
-
 		
-		for (int i = 0; i <; i++)
+		suma =  1 * tab[0] +
+		        3 * tab[1] +
+			    7 * tab[2] +
+				9 * tab[3] +
+				1 * tab[4] +
+				3 * tab[5] +
+				7 * tab[6] +
+				9 * tab[7] +
+				1 * tab[8] +
+				3 * tab[9];
+		suma %= 10;
+		suma = 10 - suma;
+
+		if (suma == tab[10])
 		{
-			
+			return 1;
 		}
+		else
+			return 0;
+
+	}
+	Suma_kontrolna(Spr_pesel object)
+	{
+		pesel = object.pesel;
 	}
 };
 

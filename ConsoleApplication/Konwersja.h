@@ -1,24 +1,33 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "Spr_pesel.h"
 using namespace std;
 class Konwersja
+	:public Spr_pesel
 {
-	string slowo;
-	
+	string pesel;
 
-public:
-	long long liczba;
-	long long zamiana(string s)
+	public:
+	int tab[11];
+	int* zamien_na_tablice(string pesel)
 	{
-		slowo = s;
-		long long i = stoll(slowo, nullptr, 10);
-		liczba = i;
-		return liczba;
+
+		for (int i = 0; i < pesel.length(); i++)
+		{
+			int liczba;
+			string litera;
+			litera = pesel[i];
+			liczba = stoi(litera);
+			tab[i] = liczba;
+		}
+		return tab;
+
 	}
-	Konwersja(string nazwa)
+	Konwersja(string s)
 	{
-		slowo = nazwa;
+		pesel = s;
 	}
+	Konwersja();
+
 };
-

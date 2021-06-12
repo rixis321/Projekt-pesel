@@ -7,6 +7,7 @@
 #include <list>
 #include "wypisz.h"
 #include "Konwersja.h"
+#include "Suma_kontrolna.h"
 using namespace std;
 int main()
 {
@@ -17,7 +18,7 @@ int main()
 	list<string> lista;
 
 	cout << "********** Walidacja i ekstrakcja danych z numery PESEL ********** " << endl;
-	cout << "Wprowadz dane za pomocą jednej z opcji(1-2) lub zakoncz dzialanie programu(3)" << endl;
+	cout << "Wprowadz dane za pomoca jednej z opcji(1-2) lub zakoncz dzialanie programu(3)" << endl;
 	cout << "1.Wprowadz dane z klawiatury "<< endl;
 	cout << "2.Wprowadz dane z pliku" << endl;
 	cout << "3.Zakoncz dzialanie programu " << endl;
@@ -31,26 +32,32 @@ int main()
 		{
 			cout << "Wprowadz numer pesel:  " << endl;
 			cin >> dane;
-			cout << "*******Sprawdzanie poprawnosc numeru pesel******* " << endl;
+			cout << "*******Sprawdzanie poprawnosc formatu numeru PESEL******* " << endl;
+			cout <<"-----------------------------------------------------------"<< endl;
 			Spr_pesel pesel(dane);
 			pesel.sprawdz(dane);
 			if (pesel.sprawdz(dane) == true)
 			{
 				while (pesel.sprawdz(dane) == true)
 				{
-					cout << "Wprowadzono nieprawidlowy numer pesel. Sprobuj ponownie :" << endl;
+					cout << "Format numeru PESEL jest nieprawidlowy. Sprobuj ponownie :" << endl;
 					cin >> dane;
 				}
 			}
 			else if (pesel.sprawdz(dane) == false)
 			{
-				cout << "Wprowadzony numer PESEL jest prawidlowy." << endl;
-				Konwersja liczba(dane);
-				liczba.zamiana(dane);
+				cout << "Wprowadzony format numeru PESEL jest prawidlowy." << endl;
+				cout << endl;
+				
 
 			}
-				
+			cout << """******* WALIDACJA NUMERU PESEL*******" << endl;
+			Konwersja tab(dane);
 			
+
+
+
+
 			cout << "1.Odczytaj date urodzenia" << endl;
 			cout << "2.Odczytaj plec" << endl;
 			cout << "3.Odczytaj dzien,miesiac,rok" << endl;
