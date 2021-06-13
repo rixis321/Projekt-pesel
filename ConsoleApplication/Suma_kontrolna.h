@@ -5,13 +5,10 @@
 using namespace std;
 
 class Suma_kontrolna
-	: public Konwersja
-{
-	string pesel;
+{	
 	int suma;
-	
-public:
-	int sprawdz_sume()
+	public:
+	int sprawdz_sume(int tab[])
 	{
 		
 		suma =  1 * tab[0] +
@@ -26,6 +23,7 @@ public:
 				3 * tab[9];
 		suma %= 10;
 		suma = 10 - suma;
+		suma %= 10;
 
 		if (suma == tab[10])
 		{
@@ -34,10 +32,17 @@ public:
 		else
 			return 0;
 
+		
+	
 	}
-	Suma_kontrolna(Spr_pesel object)
-	{
-		pesel = object.pesel;
-	}
+
+	Suma_kontrolna();
+
+	
+	
+	
+	
+	
+	
 };
 

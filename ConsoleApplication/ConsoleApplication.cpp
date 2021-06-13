@@ -15,6 +15,7 @@ int main()
 	string plik;
 	int number;
 	string dane;
+	 int tablica[11];
 	list<string> lista;
 
 	cout << "********** Walidacja i ekstrakcja danych z numery PESEL ********** " << endl;
@@ -53,7 +54,16 @@ int main()
 			}
 			cout << """******* WALIDACJA NUMERU PESEL*******" << endl;
 			Konwersja tab(dane);
-			
+			tab.zamien_na_tablice(dane, tablica);
+			Suma_kontrolna suma;
+			suma.sprawdz_sume(tablica);
+			if (suma.sprawdz_sume(tablica) == 1)
+			{
+				cout << "pesel jest git" << endl;
+			}
+			else
+				cout << "pesel jest niefajen" << endl;
+
 
 
 
@@ -110,7 +120,7 @@ int main()
 		}
 
 
-	
+		return 0;
 		
 	
 	

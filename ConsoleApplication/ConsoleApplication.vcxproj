@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Data.cpp" />
     <ClCompile Include="Spr_pesel.cpp" />
     <ClCompile Include="ConsoleApplication.cpp" />
     <ClCompile Include="Konwersja.cpp" />
@@ -147,6 +148,7 @@
     <ClCompile Include="wypisz.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Data.h" />
     <ClInclude Include="Spr_pesel.h" />
     <ClInclude Include="Konwersja.h" />
     <ClInclude Include="Suma_kontrolna.h" />

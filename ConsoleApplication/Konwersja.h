@@ -6,28 +6,29 @@ using namespace std;
 class Konwersja
 	:public Spr_pesel
 {
-	string pesel;
-
+	int t[11];
 	public:
-	int tab[11];
-	int* zamien_na_tablice(string pesel)
+		
+	int* zamien_na_tablice(string pesel, int t[11])
 	{
-
+		
 		for (int i = 0; i < pesel.length(); i++)
 		{
 			int liczba;
 			string litera;
 			litera = pesel[i];
 			liczba = stoi(litera);
-			tab[i] = liczba;
+			t[i] = liczba;
 		}
-		return tab;
+		return t;
 
 	}
 	Konwersja(string s)
 	{
 		pesel = s;
 	}
-	Konwersja();
+	
+	
+	
 
 };
