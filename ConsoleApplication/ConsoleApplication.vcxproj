@@ -140,18 +140,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Data.cpp" />
-    <ClCompile Include="Spr_pesel.cpp" />
+    <ClCompile Include="Format_pesel.cpp" />
     <ClCompile Include="ConsoleApplication.cpp" />
     <ClCompile Include="Konwersja.cpp" />
     <ClCompile Include="Suma_kontrolna.cpp" />
+    <ClCompile Include="Walidacja.cpp" />
     <ClCompile Include="wczytaj.cpp" />
     <ClCompile Include="wypisz.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data.h" />
-    <ClInclude Include="Spr_pesel.h" />
+    <ClInclude Include="Format_pesel.h" />
     <ClInclude Include="Konwersja.h" />
     <ClInclude Include="Suma_kontrolna.h" />
+    <ClInclude Include="Walidacja.h" />
     <ClInclude Include="wczytaj.h" />
     <ClInclude Include="wypisz.h" />
   </ItemGroup>

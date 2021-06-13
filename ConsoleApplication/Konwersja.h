@@ -1,14 +1,14 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "Spr_pesel.h"
+#include "Format_pesel.h"
 using namespace std;
 class Konwersja
-	:public Spr_pesel
+	:public Format_pesel
 {
-	int t[11];
+	
 	public:
-		
+	int t[11];
 	int* zamien_na_tablice(string pesel, int t[11])
 	{
 		

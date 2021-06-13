@@ -4,13 +4,11 @@
 #include <iostream>
 using namespace std;
 
-class Spr_pesel
+class Format_pesel
 {
-	
-	bool flaga;
-
 public:
 	string pesel;
+	bool flaga;
 	bool sprawdz(string s1)
 	{
 		pesel = s1;
@@ -43,10 +41,10 @@ public:
 		return flaga;
 
 	}
-	Spr_pesel(string s2)
+	Format_pesel(string s2)
 	{
 		pesel = s2;
 	}
-	Spr_pesel();
+	Format_pesel();
 
 };

@@ -1,13 +1,15 @@
 #pragma once
 #include <iostream>
-#include "Spr_pesel.h"
+#include "Format_pesel.h"
 #include "Konwersja.h"
 using namespace std;
 
 class Suma_kontrolna
 {	
-	int suma;
+	
 	public:
+	int suma;
+	int x;
 	int sprawdz_sume(int tab[])
 	{
 		
@@ -27,10 +29,10 @@ class Suma_kontrolna
 
 		if (suma == tab[10])
 		{
-			return 1;
+			return x = 1;
 		}
 		else
-			return 0;
+			return x = 0;
 
 		
 	
