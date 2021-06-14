@@ -8,9 +8,17 @@ class Konwersja
 {
 	
 	public:
-	int t[11];
+	int tb[11];
 	int* zamien_na_tablice(string pesel, int t[11])
 	{
+		for (int i = 0; i < pesel.length(); i++)
+		{
+			int liczba;
+			string litera;
+			litera = pesel[i];
+			liczba = stoi(litera);
+			tb[i] = liczba;
+		}
 		
 		for (int i = 0; i < pesel.length(); i++)
 		{
@@ -23,10 +31,12 @@ class Konwersja
 		return t;
 
 	}
+
 	Konwersja(string s)
 	{
 		pesel = s;
 	}
+	Konwersja() = default;
 	
 	
 	

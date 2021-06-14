@@ -7,24 +7,30 @@ class Data
 	int dzien;
 	int miesiac;
 	int rok;
-	int plec;
 	
-public:
-	void get_plec(Konwersja obj)
+	
+	public:
+	int plec;
+	int set_plec(Konwersja obj)
 	{
-		if (obj.t[9] % 2 == 1)
+		
+		if (obj.tb[9] % 2 == 1)
 		{
-			cout << "Mê¿czyzna" << endl;
+			return plec = 1;
 		}
 		else
-			cout << "Kobieta" << endl;
+			return plec = 0;
 
 		
+
 	}
 
+	Data() {}
 	
 	
 	
 	
+	
+
 };
 

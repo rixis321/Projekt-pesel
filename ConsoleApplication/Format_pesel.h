@@ -40,11 +40,14 @@ public:
 		}
 		return flaga;
 
+		
+
 	}
 	Format_pesel(string s2)
 	{
 		pesel = s2;
 	}
 	Format_pesel();
+	
 
 };

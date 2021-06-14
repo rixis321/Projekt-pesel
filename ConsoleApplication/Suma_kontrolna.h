@@ -5,6 +5,7 @@
 using namespace std;
 
 class Suma_kontrolna
+	
 {	
 	
 	public:
@@ -35,7 +36,7 @@ class Suma_kontrolna
 			return x = 0;
 
 		
-	
+		
 	}
 
 	Suma_kontrolna();

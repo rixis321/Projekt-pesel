@@ -2,4 +2,5 @@
 
 Suma_kontrolna::Suma_kontrolna()
 {
+	
 }
