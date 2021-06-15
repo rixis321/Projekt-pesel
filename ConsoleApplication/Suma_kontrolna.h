@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Format_pesel.h"
 #include "Konwersja.h"
+#include <memory>
 using namespace std;
 
 class Suma_kontrolna
@@ -12,25 +13,27 @@ class Suma_kontrolna
 	public:
 	int suma;
 	int x;
-	int sprawdz_sume(Konwersja obj)
+	int sprawdz_sume()
 	{
+		unique_ptr<Konwersja> tb;
+			tb->tb[0];
+			tb->tb[1];
 		
 		
-		suma =  1 * obj.tb[0] +
-		        3 * obj.tb[1] +
-			    7 * obj.tb[2] +
-				9 * obj.tb[3] +
-				1 * obj.tb[4] +
-				3 * obj.tb[5] +
-				7 * obj.tb[6] +
-				9 * obj.tb[7] +
-				1 * obj.tb[8] +
-				3 * obj.tb[9];
+		      //  3 * ptr->tb[1] +
+			  //  7 * ptr->tb[2] +
+			//	9 * ptr->tb[3] +
+			//	1 * ptr->tb[4] +
+			//	3 * ptr->tb[5] +
+			//	7 * ptr->tb[6] +
+			//	9 * ptr->tb[7] +
+			//	1 * ptr->tb[8] +
+			//	3 * ptr->tb[9];
 		suma %= 10;
 		suma = 10 - suma;
 		suma %= 10;
 
-		if (suma == obj.tb[10])
+		if (suma == tb->tb[10])
 		{
 			return x = 1;
 		}

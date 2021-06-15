@@ -18,7 +18,6 @@ int main()
 	string plik;
 	int number;
 	string dane;
-	 int tablica[11];
 	list<string> lista;
 
 	cout << "********** Walidacja i ekstrakcja danych z numery PESEL ********** " << endl;
@@ -60,7 +59,7 @@ int main()
 			Konwersja tab(pesel);
 			tab.zamien_na_tablice(dane);
 			Suma_kontrolna suma;
-			suma.sprawdz_sume(tab);
+			suma.sprawdz_sume();
 			Walidacja validator(suma,pesel);
 			Data data;
 			
@@ -83,7 +82,7 @@ int main()
 					else if (number01 == 2)
 					{
 						Plec postac;
-						postac.set_plec(tab);
+						postac.set_plec();
 						postac.get_plec();
 					}
 					else if (number01 == 3)

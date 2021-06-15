@@ -2,7 +2,7 @@
 #include "Data.h"
 #include "Konwersja.h"
 class Plec
-	:Konwersja
+	: Konwersja
 	
 {
 	int plec;
@@ -11,10 +11,10 @@ class Plec
 
 public:
 
-	int set_plec(Konwersja obj)
+	int set_plec()
 	{
 
-		if (obj.tb[9] % 2 == 1)
+		if (tb[9] % 2 == 1)
 		{
 			return plec = 1;
 		}

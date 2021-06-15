@@ -9,7 +9,7 @@ class Konwersja
 	
 	public:
 	int tb[11];
-	int* zamien_na_tablice(string pesel)
+	int *zamien_na_tablice(string pesel)
 	{
 		for (int i = 0; i < pesel.length(); i++)
 		{

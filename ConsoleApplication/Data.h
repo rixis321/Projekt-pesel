@@ -10,14 +10,14 @@ class Data
 	
 	
 	public:
-	
 
-	Data() {}
-	
-	
-	
-	
-	
 
+
+
+
+
+
+	Data() {};
+		
 };
 
