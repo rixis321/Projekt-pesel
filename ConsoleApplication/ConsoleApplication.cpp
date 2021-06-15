@@ -57,10 +57,10 @@ int main()
 			}
 			cout << """******* WALIDACJA NUMERU PESEL*******" << endl;
 			cout << "----------------------------------------" << endl;
-			Konwersja tab(dane);
-			tab.zamien_na_tablice(dane, tablica);
+			Konwersja tab(pesel);
+			tab.zamien_na_tablice(dane);
 			Suma_kontrolna suma;
-			suma.sprawdz_sume(tablica);
+			suma.sprawdz_sume(tab);
 			Walidacja validator(suma,pesel);
 			Data data;
 			

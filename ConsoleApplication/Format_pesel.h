@@ -47,7 +47,7 @@ public:
 	{
 		pesel = s2;
 	}
-	Format_pesel();
+	Format_pesel() {};
 	
 
 };
