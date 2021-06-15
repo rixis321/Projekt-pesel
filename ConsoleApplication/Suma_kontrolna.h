@@ -5,6 +5,7 @@
 using namespace std;
 
 class Suma_kontrolna
+	:Konwersja
 	
 {	
 	

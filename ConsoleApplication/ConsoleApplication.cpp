@@ -82,8 +82,8 @@ int main()
 					}
 					else if (number01 == 2)
 					{
-						data.set_plec(tab);
-						Plec postac(data);
+						Plec postac;
+						postac.set_plec(tab);
 						postac.get_plec();
 					}
 					else if (number01 == 3)
@@ -99,12 +99,7 @@ int main()
 			}
 			else
 				cout<< "nieprawidlowy numer pesel." << endl;
-			/*if (suma.sprawdz_sume(tablica) == 1)
-			{
-				cout << "pesel jest git" << endl;
-			}
-			else
-				cout << "pesel jest niefajen" << endl;*/
+
 	
 		}
 		else if (number == 2)

@@ -3,7 +3,7 @@
 #include "Format_pesel.h"
 using namespace std;
 class Walidacja
-	:Suma_kontrolna, Format_pesel
+	:Format_pesel
 {
 	bool poprawnosc;
 	int cyfra_kontrolna;

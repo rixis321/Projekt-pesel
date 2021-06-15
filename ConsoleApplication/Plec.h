@@ -2,21 +2,35 @@
 #include "Data.h"
 #include "Konwersja.h"
 class Plec
-	:Data
+	:Konwersja
 	
 {
-	int l_plci;
+	int plec;
 	int kobieta = 0;
 	int mezczyzna = 1;
 
 public:
+
+	int set_plec(Konwersja obj)
+	{
+
+		if (obj.tb[9] % 2 == 1)
+		{
+			return plec = 1;
+		}
+		else
+			return plec = 0;
+
+
+
+	}
 	void get_plec()
 	{
-		if (l_plci == kobieta)
+		if (plec == kobieta)
 		{
 			cout << "Plec : Kobieta " << endl;
 		}
-		else if (l_plci == mezczyzna)
+		else if (plec == mezczyzna)
 		{
 			cout << "Plec : Mezczyzna " << endl;
 			cout << endl;
@@ -27,9 +41,6 @@ public:
 			
 	}
 
-	Plec(Data obj)
-	{
-		l_plci = obj.plec;
-	}
+
 };
 
