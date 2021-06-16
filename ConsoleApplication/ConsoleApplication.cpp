@@ -61,7 +61,7 @@ int main()
 			Suma_kontrolna suma(tab);
 			suma.sprawdz_sume();
 			Walidacja validator(suma,pesel);
-			Data data;
+			Data data(suma);
 			
 			if (validator.walidacja() == true)
 			{
@@ -74,6 +74,7 @@ int main()
 					cout << "2.Odczytaj plec" << endl;
 					cout << "3.Odczytaj dzien,miesiac,rok" << endl;
 					cout << "4.Zakoncz dzialanie programu" << endl;
+					cout << "-----------------------------" << endl;
 					int number01;
 					cin >> number01;
 					if (number01 == 1)
@@ -85,9 +86,14 @@ int main()
 						Plec postac(suma);
 						postac.set_plec();
 						postac.get_plec();
+						cout << endl;
 					}
 					else if (number01 == 3)
 					{
+						data.setDzien();
+						data.getDzien();
+						data.setRok();
+						data.getRok();
 					}
 					else if (number01 == 4)
 					{
