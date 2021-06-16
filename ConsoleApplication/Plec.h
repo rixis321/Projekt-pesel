@@ -1,8 +1,10 @@
 #pragma once
 #include "Data.h"
 #include "Konwersja.h"
+#include "Suma_kontrolna.h"
 class Plec
-	:Konwersja
+	:Suma_kontrolna
+	
 	
 {
 	int plec;
@@ -11,10 +13,10 @@ class Plec
 
 public:
 
-	int set_plec(Konwersja obj)
+	int set_plec()
 	{
 
-		if (obj.tb[9] % 2 == 1)
+		if (*(ptr+9) % 2 == 1)
 		{
 			return plec = 1;
 		}
@@ -41,6 +43,11 @@ public:
 			
 	}
 
+	Plec(Suma_kontrolna obj)
+	{	
+		ptr = obj.ptr;
+	}
+		
 
 };
 

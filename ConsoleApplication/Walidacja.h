@@ -8,9 +8,9 @@ class Walidacja
 	bool poprawnosc;
 	int cyfra_kontrolna;
 public:
-	bool walidacja(Suma_kontrolna obj01, Format_pesel obj02)
+	bool walidacja()
 	{
-		if ((obj01.x == 1) and (obj02.flaga == false))
+		if ((cyfra_kontrolna == 1) and (flaga == false))
 		{
 			poprawnosc = true;
 
@@ -23,10 +23,10 @@ public:
 			
 	}
 
-	Walidacja(Suma_kontrolna obj01, Format_pesel obj02)
+	Walidacja(Suma_kontrolna obj1, Format_pesel obj2)
 	{
-		cyfra_kontrolna = obj01.x;
-		poprawnosc = obj02.flaga;
+		cyfra_kontrolna = obj1.x;
+		flaga = obj2.flaga;
 	}
 
 };

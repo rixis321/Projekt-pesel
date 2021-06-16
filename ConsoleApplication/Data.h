@@ -1,8 +1,8 @@
 #pragma once
-#include "Konwersja.h"
+#include "Suma_kontrolna.h"
 
 class Data
-	:Konwersja
+	:Suma_kontrolna
 {
 	int dzien;
 	int miesiac;
@@ -11,8 +11,17 @@ class Data
 	
 	public:
 	
+		int getDzien()
+		{
+			dzien = 
+		}
 
-	Data() {}
+
+
+	Data(Suma_kontrolna obj)
+	{
+		ptr = obj.ptr;
+	}
 	
 	
 	

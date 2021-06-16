@@ -9,7 +9,7 @@ class Konwersja
 	
 	public:
 	int tb[11];
-	int* zamien_na_tablice(string pesel)
+	int* zamien_na_tablice()
 	{
 		for (int i = 0; i < pesel.length(); i++)
 		{
@@ -20,15 +20,14 @@ class Konwersja
 			tb[i] = liczba;
 			
 		}
-		return tb;
-
+		return tb;	
 	}
 
 	Konwersja(Format_pesel s)
 	{
 		pesel = s.pesel;
 	}
-	Konwersja() = default;
+	Konwersja() {};
 	
 	
 	

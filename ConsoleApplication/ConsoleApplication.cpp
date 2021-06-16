@@ -18,7 +18,6 @@ int main()
 	string plik;
 	int number;
 	string dane;
-	 int tablica[11];
 	list<string> lista;
 
 	cout << "********** Walidacja i ekstrakcja danych z numery PESEL ********** " << endl;
@@ -58,15 +57,16 @@ int main()
 			cout << """******* WALIDACJA NUMERU PESEL*******" << endl;
 			cout << "----------------------------------------" << endl;
 			Konwersja tab(pesel);
-			tab.zamien_na_tablice(dane);
-			Suma_kontrolna suma;
-			suma.sprawdz_sume(tab);
+			tab.zamien_na_tablice();
+			Suma_kontrolna suma(tab);
+			suma.sprawdz_sume();
 			Walidacja validator(suma,pesel);
 			Data data;
 			
-			if (validator.walidacja(suma,pesel) == true)
+			if (validator.walidacja() == true)
 			{
 				cout << "Wprowadzony numer pesel jest prawidlowy." << endl;
+				cout << endl;
 				bool zakoncz = false;
 				while (zakoncz == false)
 				{
@@ -82,8 +82,8 @@ int main()
 					}
 					else if (number01 == 2)
 					{
-						Plec postac;
-						postac.set_plec(tab);
+						Plec postac(suma);
+						postac.set_plec();
 						postac.get_plec();
 					}
 					else if (number01 == 3)

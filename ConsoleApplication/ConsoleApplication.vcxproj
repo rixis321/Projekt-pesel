@@ -143,6 +143,7 @@
     <ClCompile Include="Format_pesel.cpp" />
     <ClCompile Include="ConsoleApplication.cpp" />
     <ClCompile Include="Konwersja.cpp" />
+    <ClCompile Include="Obsluga.cpp" />
     <ClCompile Include="Plec.cpp" />
     <ClCompile Include="Suma_kontrolna.cpp" />
     <ClCompile Include="Walidacja.cpp" />
@@ -153,6 +154,7 @@
     <ClInclude Include="Data.h" />
     <ClInclude Include="Format_pesel.h" />
     <ClInclude Include="Konwersja.h" />
+    <ClInclude Include="Obsluga.h" />
     <ClInclude Include="Plec.h" />
     <ClInclude Include="Suma_kontrolna.h" />
     <ClInclude Include="Walidacja.h" />
