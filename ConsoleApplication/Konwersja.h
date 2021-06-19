@@ -9,19 +9,8 @@ class Konwersja
 	
 	public:
 	int tb[11];
-	int* zamien_na_tablice()
-	{
-		for (int i = 0; i < pesel.length(); i++)
-		{
-			int liczba;
-			string litera;
-			litera = pesel[i];
-			liczba = stoi(litera);
-			tb[i] = liczba;
-			
-		}
-		return tb;	
-	}
+	
+	int* zamien_na_tablice();
 
 	Konwersja(Format_pesel s)
 	{
