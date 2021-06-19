@@ -1,6 +1,7 @@
 #pragma once
 #include "Suma_kontrolna.h"
 
+
 class Data
 	:Suma_kontrolna
 {
@@ -19,8 +20,6 @@ class Data
 	{
 		ptr = obj.ptr;
 	}
-	
-	
 	Data() {};
 	
 	

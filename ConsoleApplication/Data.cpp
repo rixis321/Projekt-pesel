@@ -1,5 +1,6 @@
 #include "Data.h"
 
+
 using namespace std;
 
 
@@ -41,7 +42,7 @@ int Data::setRok()
 	{
 		rok += 2200;
 	}
-	return rok;
+	return rok, miesiac;
 }
 
 void Data::getRok()

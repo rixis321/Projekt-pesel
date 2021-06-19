@@ -11,7 +11,8 @@
 #include "Walidacja.h"
 #include "Data.h"
 #include "Plec.h"
-using namespace std;
+#include "Obsluga.h"
+
 int main()
 {
 	
@@ -62,6 +63,12 @@ int main()
 			suma.sprawdz_sume();
 			Walidacja validator(suma,pesel);
 			Data data(suma);
+			Plec postac(suma);
+			postac.set_plec();
+			data.setDzien();
+			data.setRok();
+			Obsluga obsluga(data);
+			obsluga.setMiesiac();
 			
 			if (validator.walidacja() == true)
 			{
@@ -79,21 +86,23 @@ int main()
 					cin >> number01;
 					if (number01 == 1)
 					{
-
+						obsluga.data_urodzenia();
+						cout << endl;
 					}
 					else if (number01 == 2)
 					{
-						Plec postac(suma);
-						postac.set_plec();
+						
+						
 						postac.get_plec();
 						cout << endl;
 					}
 					else if (number01 == 3)
 					{
-						data.setDzien();
+						
 						data.getDzien();
-						data.setRok();
+						obsluga.getMiesiac();
 						data.getRok();
+						cout << endl;
 					}
 					else if (number01 == 4)
 					{

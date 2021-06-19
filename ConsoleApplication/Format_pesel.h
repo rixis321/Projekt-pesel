@@ -12,6 +12,7 @@ public:
 
 	bool sprawdz(string s1);
 
+
 	Format_pesel(string s2)
 	{
 		pesel = s2;
