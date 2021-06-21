@@ -5,6 +5,7 @@ class Obsluga
 	:Data
 {
 public:
+	bool control;
 	
 
 	int setMiesiac();
@@ -12,7 +13,14 @@ public:
 	void getMiesiac();
 
 	void data_urodzenia();
+
+	int spr_miesiac();
 	
+	int spr_dzien();
+
+	int rok_przystepny();
+
+	bool kontrola();
 
 	Obsluga(Data obj)
 	{
