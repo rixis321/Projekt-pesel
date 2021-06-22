@@ -26,6 +26,7 @@ bool Format_pesel::sprawdz(string s1)
 			if (c < 47 or c > 58)
 			{
 				flaga = true;
+				break;
 			}
 		}
 

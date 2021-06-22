@@ -61,7 +61,6 @@ int main()
 			tab.zamien_na_tablice();
 			Suma_kontrolna suma(tab);
 			suma.sprawdz_sume();
-			Walidacja validator(suma,pesel);
 			Data data(suma);
 			Plec postac(suma);
 			postac.set_plec();
@@ -69,6 +68,10 @@ int main()
 			data.setRok();
 			Obsluga obsluga(data);
 			obsluga.setMiesiac();
+			obsluga.kontrola();
+			
+			Walidacja validator(suma,pesel,obsluga);
+			
 			
 			if (validator.walidacja() == true)
 			{
@@ -130,7 +133,7 @@ int main()
 			cout << "*******Sprawdzanie formatu wprowadzonych danych******* " << endl;
 			cout << "-------------------------------------------------------" << endl;
 			list<string> lista2;
-			list<string>::iterator it = lista2.begin();
+			/*list<string>::iterator it = lista2.begin();*/
 			for (string x : lista)
 			{
 				Format_pesel pesel(x);
@@ -140,13 +143,37 @@ int main()
 					lista2.push_back(x);
 				}
 			}
-			cout <<"Lista numerow po usunieciu nieprawidlowych danych: "<< endl;
+			cout <<"Lista numerow po usunieciu nieprawidlowych formatów danych: "<< endl;
 			cout << "--------------------------------------------------" << endl;
 			wypisz(lista2);
 			cout << endl;
 			 cout << """******* WALIDACJA NUMEROW PESEL*******" << endl;
 			cout << "----------------------------------------" << endl;
+			list  <string> lista3;
+			for (string x : lista2)
+			{
+				Format_pesel pesel(x);
+				Konwersja tab(pesel);
+				tab.zamien_na_tablice();
+				Suma_kontrolna suma(tab);
+				suma.sprawdz_sume();
+				Data data(suma);
+				Plec postac(suma);
+				postac.set_plec();
+				data.setDzien();
+				data.setRok();
+				Obsluga obsluga(data);
+				obsluga.setMiesiac();
+				obsluga.kontrola();
 
+				Walidacja validator(suma, pesel, obsluga);
+				if (validator.walidacja() == true)
+				{
+					lista3.push_back(x);
+				}
+				
+			}
+			wypisz(lista3);
 
 		}
 		else if (number == 3)

@@ -22,12 +22,13 @@ public:
 
 	bool kontrola();
 
-	Obsluga(Data obj)
+	Obsluga(Data & obj)
 	{
 		miesiac = obj.miesiac;
 		rok = obj.rok;
 		dzien = obj.dzien;
 	}
-	Obsluga() {};
+	Obsluga() {
+	};
 };
 

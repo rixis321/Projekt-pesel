@@ -16,7 +16,7 @@ class Data
 		void getRok();
 		
 
-	Data(Suma_kontrolna obj)
+	Data(Suma_kontrolna  obj)
 	{
 		ptr = obj.ptr;
 	}
