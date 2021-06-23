@@ -12,6 +12,7 @@
 #include "Data.h"
 #include "Plec.h"
 #include "Obsluga.h"
+#include "odczyt_plik.h"
 
 int main()
 {
@@ -134,25 +135,35 @@ int main()
 			cout << "-------------------------------------------------------" << endl;
 			list<string> lista2;
 			/*list<string>::iterator it = lista2.begin();*/
+			int i = 0;
+			int k = 0;
 			for (string x : lista)
 			{
+				i++;
 				Format_pesel pesel(x);
 				pesel.sprawdz(x);
 				if (pesel.sprawdz(x) == false)
 				{
+					k++;
 					lista2.push_back(x);
 				}
 			}
-			cout <<"Lista numerow po usunieciu nieprawidlowych formatów danych: "<< endl;
+			cout << "Liczba wprowadzonych danych :" << i << endl;
+			cout << "Liczba danych po procesie sprawdzenia formatu :" << k << endl;
+			cout <<"Lista numerow po usunieciu nieprawidlowych formatow danych: "<< endl;
 			cout << "--------------------------------------------------" << endl;
 			wypisz(lista2);
 			cout << endl;
-			 cout << """******* WALIDACJA NUMEROW PESEL*******" << endl;
+			cout << endl;
+			cout << """*******WALIDACJA NUMEROW PESEL*******" << endl;
 			cout << "----------------------------------------" << endl;
+			int j = 0;
 			list  <string> lista3;
 			for (string x : lista2)
 			{
+				
 				Format_pesel pesel(x);
+				pesel.sprawdz(x);
 				Konwersja tab(pesel);
 				tab.zamien_na_tablice();
 				Suma_kontrolna suma(tab);
@@ -170,11 +181,43 @@ int main()
 				if (validator.walidacja() == true)
 				{
 					lista3.push_back(x);
+					j++;
 				}
 				
 			}
+			cout << "Liczba danych po procesie walidacji : " << j << endl;
 			wypisz(lista3);
+			cout << endl;
+			cout << endl;
+			bool zakoncz = false;
+		
+			while (zakoncz == false)
+			{
+				cout << "1.Odczytaj dane dla wszystkich numerow pesel." << endl;
+				cout << "2.Zapisz dane w pliku" << endl;
+				cout << "3.Zakoncz dzialanie programu" << endl;
 
+				int x;
+				cin >> x;
+				if (x == 1)
+				{
+					odczyt(lista3);
+				}
+				if (x == 2)
+				{
+					string nazwa_pliku;
+					cout << "Podaj nazwe pliku : " << endl;
+					cin>>nazwa_pliku;
+
+				}
+				if (x == 3)
+				{
+					zakoncz = true;
+				}
+			
+			}
+	
+			
 		}
 		else if (number == 3)
 		{

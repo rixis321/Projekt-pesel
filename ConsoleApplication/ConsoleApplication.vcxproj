@@ -144,22 +144,26 @@
     <ClCompile Include="ConsoleApplication.cpp" />
     <ClCompile Include="Konwersja.cpp" />
     <ClCompile Include="Obsluga.cpp" />
+    <ClCompile Include="odczyt_plik.cpp" />
     <ClCompile Include="Plec.cpp" />
     <ClCompile Include="Suma_kontrolna.cpp" />
     <ClCompile Include="Walidacja.cpp" />
     <ClCompile Include="wczytaj.cpp" />
     <ClCompile Include="wypisz.cpp" />
+    <ClCompile Include="Zapisz.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data.h" />
     <ClInclude Include="Format_pesel.h" />
     <ClInclude Include="Konwersja.h" />
     <ClInclude Include="Obsluga.h" />
+    <ClInclude Include="odczyt_plik.h" />
     <ClInclude Include="Plec.h" />
     <ClInclude Include="Suma_kontrolna.h" />
     <ClInclude Include="Walidacja.h" />
     <ClInclude Include="wczytaj.h" />
     <ClInclude Include="wypisz.h" />
+    <ClInclude Include="Zapisz.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
