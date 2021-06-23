@@ -1,0 +1,70 @@
+Numer pesel: 67091181249
+Data urodzenia:11.9.1967
+Plec: Kobieta
+Dzien: 11
+Miesiac: 9
+Rok: 1967
+---------------------------------------
+Numer pesel: 62100347186
+Data urodzenia:3.10.1962
+Plec: Kobieta
+Dzien: 3
+Miesiac: 10
+Rok: 1962
+---------------------------------------
+Numer pesel: 99100438828
+Data urodzenia:4.10.1999
+Plec: Kobieta
+Dzien: 4
+Miesiac: 10
+Rok: 1999
+---------------------------------------
+Numer pesel: 83092371935
+Data urodzenia:23.9.1983
+Plec: Mezczyzna
+Dzien: 23
+Miesiac: 9
+Rok: 1983
+---------------------------------------
+Numer pesel: 55010525656
+Data urodzenia:5.1.1955
+Plec: Mezczyzna
+Dzien: 5
+Miesiac: 1
+Rok: 1955
+---------------------------------------
+Numer pesel: 02252087363
+Data urodzenia:20.5.2002
+Plec: Kobieta
+Dzien: 20
+Miesiac: -15
+Rok: 2002
+---------------------------------------
+Numer pesel: 79040726841
+Data urodzenia:7.4.1979
+Plec: Kobieta
+Dzien: 7
+Miesiac: 4
+Rok: 1979
+---------------------------------------
+Numer pesel: 62110851561
+Data urodzenia:8.11.1962
+Plec: Kobieta
+Dzien: 8
+Miesiac: 11
+Rok: 1962
+---------------------------------------
+Numer pesel: 91081511936
+Data urodzenia:15.8.1991
+Plec: Mezczyzna
+Dzien: 15
+Miesiac: 8
+Rok: 1991
+---------------------------------------
+Numer pesel: 97060726878
+Data urodzenia:7.6.1997
+Plec: Mezczyzna
+Dzien: 7
+Miesiac: 6
+Rok: 1997
+---------------------------------------

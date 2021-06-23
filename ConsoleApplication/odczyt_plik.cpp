@@ -2,9 +2,7 @@
 #include <string>
 #include <sstream>
 #include "Format_pesel.h"
-#include "wczytaj.h"
 #include <list>
-#include "wypisz.h"
 #include "Konwersja.h"
 #include "Suma_kontrolna.h"
 #include "Walidacja.h"

@@ -7,11 +7,13 @@ class Plec
 	
 	
 {
+	
+	
+
+public:
 	int plec;
 	int kobieta = 0;
 	int mezczyzna = 1;
-
-public:
 
 	int set_plec();
 	

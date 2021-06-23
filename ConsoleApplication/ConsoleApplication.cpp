@@ -13,6 +13,7 @@
 #include "Plec.h"
 #include "Obsluga.h"
 #include "odczyt_plik.h"
+#include "Zapisz.h"
 
 int main()
 {
@@ -134,7 +135,6 @@ int main()
 			cout << "*******Sprawdzanie formatu wprowadzonych danych******* " << endl;
 			cout << "-------------------------------------------------------" << endl;
 			list<string> lista2;
-			/*list<string>::iterator it = lista2.begin();*/
 			int i = 0;
 			int k = 0;
 			for (string x : lista)
@@ -194,7 +194,7 @@ int main()
 			while (zakoncz == false)
 			{
 				cout << "1.Odczytaj dane dla wszystkich numerow pesel." << endl;
-				cout << "2.Zapisz dane w pliku" << endl;
+				cout << "2.Przeprowadz analize danych i zapisz je w pliku" << endl;
 				cout << "3.Zakoncz dzialanie programu" << endl;
 
 				int x;
@@ -208,7 +208,9 @@ int main()
 					string nazwa_pliku;
 					cout << "Podaj nazwe pliku : " << endl;
 					cin>>nazwa_pliku;
-
+					zapisz(nazwa_pliku, lista3);
+					cout << "Dane zapisane pomyslnie w pliku o nazwie " << nazwa_pliku  << endl;
+					cout << endl;
 				}
 				if (x == 3)
 				{
