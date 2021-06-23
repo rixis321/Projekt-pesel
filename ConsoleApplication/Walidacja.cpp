@@ -4,18 +4,17 @@
 using namespace std;
 
 
+bool Walidacja::walidacja()
+{
+	if ((Suma_kontrolna::x == 1) and (Format_pesel::flaga == false) and Obsluga::control == 1)
+	{
+		poprawnosc = true;
 
-//bool Walidacja::walidacja()
-//{
-//	if ((cyfra_kontrolna == 1) and (flaga == false) )
-//	{
-//		poprawnosc = true;
-//
-//	}
-//	else
-//		poprawnosc = false;
-//
-//	return poprawnosc;
-//
-//
-//}
+	}
+	else
+		poprawnosc = false;
+
+	return poprawnosc;
+
+
+}
