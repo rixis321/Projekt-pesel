@@ -17,8 +17,8 @@ bool Format_pesel::sprawdz(string s1)
 
 	}
 	else
-		flaga = false;
 	{
+		flaga = false;
 
 		for (int i = 0; i < pesel.length(); i++)
 		{
@@ -29,10 +29,9 @@ bool Format_pesel::sprawdz(string s1)
 				break;
 			}
 		}
-
 	}
 	return flaga;
 
-
+	
 
 }

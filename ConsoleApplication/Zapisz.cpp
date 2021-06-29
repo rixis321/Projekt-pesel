@@ -28,7 +28,7 @@ void zapisz(string nazwa_p, list<string> lista)
 		suma.sprawdz_sume();
 		Data data(suma);
 		Plec postac(suma);
-		postac.set_plec();
+		postac.set_plec(); 
 		data.setDzien();
 		data.setRok();
 		Obsluga obsluga(data);

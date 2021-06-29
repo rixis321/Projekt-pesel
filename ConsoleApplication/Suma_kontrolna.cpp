@@ -24,6 +24,6 @@ int Suma_kontrolna::sprawdz_sume()
 	else
 		return x = 0;
 
-	return 1;
+	
 
 }
