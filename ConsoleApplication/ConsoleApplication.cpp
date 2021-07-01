@@ -14,6 +14,7 @@
 #include "Obsluga.h"
 #include "odczyt_plik.h"
 #include "Zapisz.h"
+#include "Lista.h"
 
 int main()
 {
@@ -22,6 +23,7 @@ int main()
 	int number;
 	string dane;
 	list<string> lista;
+	Lista* baza = new Lista;
 
 	cout << "********** Walidacja i ekstrakcja danych z numery PESEL ********** " << endl;
 	cout << "Wprowadz dane za pomoca jednej z opcji(1-2) lub zakoncz dzialanie programu(3)" << endl;
@@ -36,90 +38,112 @@ int main()
 	}
 		if (number == 1)
 		{
-			cout << "Wprowadz numer pesel:  " << endl;
-			cin >> dane;
-			cout << "*******Sprawdzanie poprawnosc formatu numeru PESEL******* " << endl;
-			cout <<"-----------------------------------------------------------"<< endl;
-			Format_pesel pesel(dane);
-			pesel.sprawdz(dane);
-			if (pesel.sprawdz(dane) == true)
+			bool kontrola = true;
+			while (kontrola == true)
 			{
-				while (pesel.sprawdz(dane) == true)
+				cout << "Wprowadz numer pesel:  " << endl;
+				cin >> dane;
+				cout << "*******Sprawdzanie poprawnosc formatu numeru PESEL******* " << endl;
+				cout << "-----------------------------------------------------------" << endl;
+				Format_pesel pesel(dane);
+				pesel.sprawdz(dane);
+				if (pesel.sprawdz(dane) == true)
 				{
-					cout << "Format numeru PESEL jest nieprawidlowy. Sprobuj ponownie :" << endl;
-					cin >> dane;
+					while (pesel.sprawdz(dane) == true)
+					{
+						cout << "Format numeru PESEL jest nieprawidlowy. Sprobuj ponownie :" << endl;
+						cin >> dane;
+					}
 				}
-			}
-			else if (pesel.sprawdz(dane) == false)
-			{
-				cout << "Wprowadzony format numeru PESEL jest prawidlowy." << endl;
-				cout << endl;
-				
-
-			}
-			cout << """******* WALIDACJA NUMERU PESEL*******" << endl;
-			cout << "----------------------------------------" << endl;
-			Konwersja tab(pesel);
-			tab.zamien_na_tablice();
-			Suma_kontrolna suma(tab);
-			suma.sprawdz_sume();
-			Data data(suma);
-			Plec postac(suma);
-			postac.set_plec();
-			data.setDzien();
-			data.setRok();
-			Obsluga obsluga(data);
-			obsluga.setMiesiac();
-			obsluga.kontrola();
-			
-			Walidacja validator(suma,pesel,obsluga);
-			
-			
-			if (validator.walidacja() == true)
-			{
-				cout << "Wprowadzony numer pesel jest prawidlowy." << endl;
-				cout << endl;
-				bool zakoncz = false;
-				while (zakoncz == false)
+				else if (pesel.sprawdz(dane) == false)
 				{
-					cout << "1.Odczytaj date urodzenia" << endl;
-					cout << "2.Odczytaj plec" << endl;
-					cout << "3.Odczytaj dzien,miesiac,rok" << endl;
-					cout << "4.Zakoncz dzialanie programu" << endl;
-					cout << "-----------------------------" << endl;
-					int number01;
-					cin >> number01;
-					if (number01 == 1)
-					{
-						obsluga.data_urodzenia();
-						cout << endl;
-					}
-					else if (number01 == 2)
-					{
-						
-						
-						postac.get_plec();
-						cout << endl;
-					}
-					else if (number01 == 3)
-					{
-						
-						data.getDzien();
-						obsluga.getMiesiac();
-						data.getRok();
-						cout << endl;
-					}
-					else if (number01 == 4)
-					{
-						zakoncz = true;
-					}
+					cout << "Wprowadzony format numeru PESEL jest prawidlowy." << endl;
+					cout << endl;
+
 
 				}
-				
-			}
-			else
-				cout<< "nieprawidlowy numer pesel." << endl;
+				cout << """******* WALIDACJA NUMERU PESEL*******" << endl;
+				cout << "----------------------------------------" << endl;
+				Konwersja tab(pesel);
+				tab.zamien_na_tablice();
+				Suma_kontrolna suma(tab);
+				suma.sprawdz_sume();
+				Data data(suma);
+				Plec postac(suma);
+				postac.set_plec();
+				data.setDzien();
+				data.setRok();
+				Obsluga obsluga(data);
+				obsluga.setMiesiac();
+				obsluga.kontrola();
 
+				Walidacja validator(suma, pesel, obsluga);
+
+
+				if (validator.walidacja() == true)
+				{
+					cout << "Wprowadzony numer pesel:" << pesel << " jest prawidlowy" << endl;
+					baza->dodaj_pesel(pesel);
+					cout << endl;
+					bool zakoncz = false;
+					while (zakoncz == false)
+					{
+						cout << "1.Odczytaj date urodzenia" << endl;
+						cout << "2.Odczytaj plec" << endl;
+						cout << "3.Odczytaj dzien,miesiac,rok" << endl;
+						cout << "4.Wyswietl liste wprowadzonych danych" << endl;
+						cout << "5.Wprowadz ponownie dane" << endl;
+						cout << "6.Zakoncz dzialanie programu" << endl;
+						cout << "-----------------------------" << endl;
+						int number01;
+						cin >> number01;
+						if (number01 == 1)
+						{
+							obsluga.data_urodzenia();
+							cout << endl;
+						}
+						else if (number01 == 2)
+						{
+
+
+							postac.get_plec();
+							cout << endl;
+						}
+						else if (number01 == 3)
+						{
+
+							data.getDzien();
+							obsluga.getMiesiac();
+							data.getRok();
+							cout << endl;
+						}
+						else if (number01 == 4)
+						{
+							baza->wyswietl_liste();
+							cout << endl;
+						}
+						else if (number01 == 5)
+						{
+							zakoncz = true;
+						}
+						else if (number01 == 6)
+						{
+							zakoncz = true;
+							kontrola = false;
+							cout << "Dziekujemy za skorzystanie z programu" << endl;
+							break;
+							
+						}
+
+
+					}
+
+				}
+				else
+					cout << "Nieprawidlowy numer pesel:"<< pesel<< " Sprobuj ponownie." << endl;
+
+			}
+			
 	
 		}
 		else if (number == 2)

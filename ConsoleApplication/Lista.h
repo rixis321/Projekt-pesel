@@ -8,17 +8,15 @@ class Lista
 
 
 public:
-	int suma;
 
 	Lista()
 	{
 		pierwszy = 0;
-		suma = 0;
+		
 	}
 
 	void  dodaj_pesel(Format_pesel obj)
 	{
-		suma++;
 		Element* nowy = new Element;
 
 		nowy->element = obj.pesel;
@@ -45,10 +43,12 @@ public:
 		Element* temp = pierwszy;
 		while (temp)
 		{
-			cout << "Pesel: " << temp->element << endl;
+			cout << temp->element.pesel << ",";
 			temp = temp->nastepny;
 		}
+
 	}
+
 
 };
 

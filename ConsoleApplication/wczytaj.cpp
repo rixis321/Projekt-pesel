@@ -1,6 +1,7 @@
 #include <iostream>
 #include <list>
 #include <fstream>
+#include "Lista.h"
 using namespace std;
 
 list<string> wczytaj(string nazwa_pliku)

@@ -19,9 +19,9 @@ public:
 	}
 	Format_pesel() {};
 	
-	friend istream& operator>>(istream& strumien_we, Format_pesel& obj)
+	friend ostream& operator<<(ostream& strumien, Format_pesel& obj)
 	{
-		strumien_we >> obj.pesel;
-		return strumien_we;
+		strumien << obj.pesel;
+		return strumien;
 	}
 };
